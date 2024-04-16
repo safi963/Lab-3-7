@@ -67,7 +67,7 @@ pipeline {
         
         stage ("Run Security Checks") {
             steps {
-                10.48.10.187                                                           ###change the IP address in this section to your cluster IP address!!!!####
+                //                                                           ###change the IP address in this section to your cluster IP address!!!!####
                 sh 'docker pull public.ecr.aws/portswigger/dastardly:latest'
                 sh '''
                     docker run --user $(id -u) -v ${WORKSPACE}:${WORKSPACE}:rw \
